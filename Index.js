@@ -1,18 +1,12 @@
-//Неявне повертання обєкта
-// const newPost = (post, addeaAt = Date()) => ({
-//   ...post,
-//   addeaAt,
-// });
-
-//Явне повернення
-
-const newPost = (post, addeaAt = Date()) => {
-  return { ...post, addeaAt };
+const fnWithError = () => {
+  throw new Error("Some error");
 };
 
-const firstPost = {
-  id: 1,
-  author: "Vasyl",
-};
+try {
+  fnWithError();
+} catch (error) {
+  console.error(error);
+  console.log(error.message);
+}
 
-console.log(newPost(firstPost));
+console.log("Continue...");
