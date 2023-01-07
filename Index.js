@@ -4,6 +4,8 @@
 //   addeaAt,
 // });
 
+//Явне повернення
+
 const newPost = (post, addeaAt = Date()) => {
   return { ...post, addeaAt };
 };
