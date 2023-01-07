@@ -1,19 +1,16 @@
-// function multByFactor(value, multiplier = 1) {
-//   return value * multiplier;
-// }
+//Неявне повертання обєкта
+// const newPost = (post, addeaAt = Date()) => ({
+//   ...post,
+//   addeaAt,
+// });
 
-// const multByFactor = function (value, multiplier = 1) {
-//   return value * multiplier;
-// };
-
-// const multByFactor = (value, multiplier = 1) => value * multiplier;
-
-//
-
-const multByFactor = (value, multiplier = 1) => {
-  return value * multiplier;
+const newPost = (post, addeaAt = Date()) => {
+  return { ...post, addeaAt };
 };
 
-console.log(multByFactor(20, 4));
-console.log(multByFactor(4, 0));
-console.log(multByFactor(40));
+const firstPost = {
+  id: 1,
+  author: "Vasyl",
+};
+
+console.log(newPost(firstPost));
