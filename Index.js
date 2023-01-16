@@ -1,12 +1,12 @@
-const fnWithError = () => {
-  throw new Error("Some error");
-};
-
-try {
-  fnWithError();
-} catch (error) {
-  console.error(error);
-  console.log(error.message);
+function myFn(a) {
+  console.log(a);
 }
 
-console.log("Continue...");
+const b = true;
+let c = 10;
+
+myFn(2 + 3);
+myFn(2, 3);
+myFn(b);
+myFn((c = c + 1));
+// myFn(led d)
